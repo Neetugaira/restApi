@@ -1,0 +1,7 @@
+.type{
+    position: absolute;
+    left: 450px;
+    top: 100px;
+    border-radius: 1px;
+    color: red;
+}

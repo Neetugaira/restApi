@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {AppService} from './app.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  data: any;
+constructor(private service: AppService) {}
+  saveData(form) {
+      this.data = form.value;
+      this.service.saveData(this.data).subscribe(res => {
+      });
+}
 }
